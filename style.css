@@ -1,8 +1,12 @@
+*{
+    margin: 30px;
+}
 body {
     font-family: Arial, sans-serif;
   }
   
-  #container {
+  #container-1,
+  #container-2 {
     width: 600px;
     margin: 0 auto;
     padding: 30px;
@@ -21,7 +25,9 @@ body {
     object-fit: contain;
   }
   
-  button {
+  #logIn,
+  #signUp,
+  #submitBtn {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -30,9 +36,17 @@ body {
     background-color: #007bff;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    border-radius: 13px;
+    width: 120px;
+  }
+  #logIn{
+    margin-left: 10px;
   }
   
-  button:hover {
+  #logIn:hover {
+    background-color: #0069d9;
+  }
+  #signUp:hover {
     background-color: #0069d9;
   }
   
@@ -75,8 +89,9 @@ body {
     justify-content: center;
     margin-top: 20px;
     position: absolute;
-    bottom: 400px;
-    left: 50rem;
+    z-index: 999;
+    left: 45rem;
+    bottom: 230px;
   }
   
   .gif {
