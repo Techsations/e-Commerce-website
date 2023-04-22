@@ -1,3 +1,6 @@
+*{
+    margin-top: 30px;
+}
 body {
     font-family: Arial, sans-serif;
   }
@@ -21,7 +24,8 @@ body {
     object-fit: contain;
   }
   
-  button {
+  #logIn,
+  #signUp {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -30,9 +34,17 @@ body {
     background-color: #007bff;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    border-radius: 13px;
+    width: 120px;
+  }
+  #logIn{
+    margin-left: 10px;
   }
   
-  button:hover {
+  #logIn:hover {
+    background-color: #0069d9;
+  }
+  #signUp:hover {
     background-color: #0069d9;
   }
 
