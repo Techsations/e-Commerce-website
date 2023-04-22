@@ -29,7 +29,7 @@ function submit() {
           let storage = [];
           storage.push(users);
           localStorage.setItem("myUsers", JSON.stringify(storage));
-          console.log(typeof(storage));
+          console.log((storage));
       } else {
           storage.push(users);
           localStorage.setItem("myUsers", JSON.stringify(storage));
