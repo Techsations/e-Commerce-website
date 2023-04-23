@@ -20,8 +20,20 @@ if (!user) {
 dashboardWelcome.innerHTML = `Welcome to Shoppy, ${user.username}!`;
 
 // Handle the logout process
-logoutBtn.addEventListener("click", () => {
-  // Remove the current user from localStorage and redirect to the login page
-  localStorage.removeItem("user");
-  window.location.href = "index.html";
-});
+// logoutBtn.addEventListener("click", () => {
+//   // Remove the current user from localStorage and redirect to the login page
+//   localStorage.removeItem("user");
+//   window.location.href = "signin.html";
+// });
+
+// Fetch data from API
+
+let showProducts = document.getElementById("showProducts");
+
+async function dispProd() {
+  let allProd = await fetch("https://dummyjson.com/products")
+  let products = await allProd.json()
+    console.log(products);
+}
+
+dispProd();
