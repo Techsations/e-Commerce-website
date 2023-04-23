@@ -28,12 +28,47 @@ dashboardWelcome.innerHTML = `Welcome to Shoppy, ${user.username}!`;
 
 // Fetch data from API
 
-let showProducts = document.getElementById("showProducts");
 
-async function dispProd() {
-  let allProd = await fetch("https://dummyjson.com/products")
-  let products = await allProd.json()
-    console.log(products);
-}
+document.addEventListener('DOMContentLoaded', function () {
+  let products = document.querySelector('.products');
+  async function fetchProducts(url) {
+    let data = await fetch(url);
+    let response = await data.json();
+    console.log(response);
 
-dispProd();
+    for (let i = 0; i < response.length; i++) {
+      products.innerHTML += `
+    <div class="product">
+      <img src="" alt="" class="prod-img">
+      <h2 class="prod-title">${response[i].title}</h2>
+      <h4 class="prod-category">${response[i].category}</h4>
+      <p class="prod-description"></p>
+      <div class="price-cont">
+        <h3 class="prod-price"></h3>
+        <div class="dis-cart-cont">
+          <h4 class="prod-discount"></h4>
+          <a href="#" data-prodId="" class="add-to-cart"></a>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+  };
+  fetchProducts('https://dummyjson.com/products');
+});
+
+
+
+
+// async function dispProd() {
+//   let allProd = await fetch("https://dummyjson.com/products")
+//   let response = await allProd.json()
+//     console.log(response);
+
+
+
+    
+    
+// }
+
+// dispProd();
