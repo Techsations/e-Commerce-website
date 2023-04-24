@@ -44,6 +44,11 @@ body{
     font-size: 40px;
     padding-left: 10px;
   }
+
+  /* styling the add to cart section */
+  .btn-container{
+    position: relative;
+  }
   .cart-btn{
     background: rgb(118, 97, 255);
     width: 7rem;
@@ -63,6 +68,13 @@ body{
   }
   #count{
     font-size: 2rem;
+  }
+  .cart-container{
+    position: absolute;
+    background-color: aqua;
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
   }
   /* styling the products section */
   .container{
