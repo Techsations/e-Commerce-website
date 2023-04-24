@@ -54,9 +54,15 @@ body{
     border: none;
     text-decoration: none;
     margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .cart-btn .icofont-cart{
-    font-size: 3rem;
+    font-size: 5rem;
+  }
+  #count{
+    font-size: 2rem;
   }
   /* styling the products section */
   .container{
