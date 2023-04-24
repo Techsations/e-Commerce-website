@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="price-cont">
         <h3 class="prod-price">$${response[i].price}</h3>
         <div class="dis-cart-cont">
-          <h4 class="prod-rating">${response[i].rating.rate}</h4>
-          <a href="#" data-prodId="${response[i].id}" class="add-to-cart"></a>
+          <h4 class="prod-rating">⭐${response[i].rating.rate}</h4>
+          <a href="#!" data-prodId="${response[i].id}" class="add-to-cart"><i class="icofont-cart"></i></a>
         </div>
       </div>
     </div>

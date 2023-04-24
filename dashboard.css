@@ -35,6 +35,11 @@ body{
     font-size: 40px;
     font-weight: 800;
   }
+  .head-tag{
+    background-color: orange;
+    font-size: 40px;
+    padding-left: 10px;
+  }
   /* styling the products section */
   .container{
     max-width: 144rem;
@@ -46,6 +51,7 @@ body{
     padding: 0 0 2rem 0;
   }
   .products{
+    padding: 2rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
     gap: 2rem;
@@ -57,4 +63,27 @@ body{
   .prod-title{
     font-size: 2rem;
     padding: 1rem 0;
+  }
+  .prod-description{
+    text-align: justify;
+  }
+  .dis-cart-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-to-cart{
+    background: rgb(118, 97, 255);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    border-radius: 1rem;
+    text-decoration: none;
+  }
+  .add-to-cart .icofont-cart{
+    font-size: 3rem;
   }
