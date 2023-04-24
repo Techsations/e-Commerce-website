@@ -41,6 +41,10 @@ body{
     padding: 0 2rem;
     margin: 0 auto;
   }
+  .product{
+    background-color: #f9f8fc;
+    padding: 0 0 2rem 0;
+  }
   .products{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
@@ -49,4 +53,8 @@ body{
   .prod-img{
     width: 250px;
     height: 250px;
+  }
+  .prod-title{
+    font-size: 2rem;
+    padding: 1rem 0;
   }
