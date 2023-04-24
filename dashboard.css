@@ -35,8 +35,12 @@ body{
     font-size: 40px;
     font-weight: 800;
   }
-  .head-tag{
+  .header{
+    display: flex;
+    justify-content: space-between;
     background-color: orange;
+  }
+  .head-tag{
     font-size: 40px;
     padding-left: 10px;
   }
