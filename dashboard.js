@@ -38,10 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = 0; i < response.length; i++) {
       let description = response[i].description;
+      let title = response[i].title;
       products.innerHTML += `
     <div class="product">
       <img src="${response[i].image}" alt="" class="prod-img">
-      <h2 class="prod-title">${response[i].title}</h2>
+      <h2 class="prod-title">${title.length > 18 ? title.substring(0, 18).concat('...') : title}</h2>
       <h4 class="prod-category">${response[i].category}</h4>
       <p class="prod-description">${description.length > 80 ? description.substring(0, 80).concat('...more') : description}</p>
       <div class="price-cont">
