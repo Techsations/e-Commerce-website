@@ -37,24 +37,25 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(response);
 
     for (let i = 0; i < response.length; i++) {
+      let description = response[i].description;
       products.innerHTML += `
     <div class="product">
-      <img src="" alt="" class="prod-img">
+      <img src="${response[i].image}" alt="" class="prod-img">
       <h2 class="prod-title">${response[i].title}</h2>
       <h4 class="prod-category">${response[i].category}</h4>
-      <p class="prod-description"></p>
+      <p class="prod-description">${description.length > 80 ? description.substring(0, 80).concat('...more') : description}</p>
       <div class="price-cont">
-        <h3 class="prod-price"></h3>
+        <h3 class="prod-price">${response[i].price}</h3>
         <div class="dis-cart-cont">
-          <h4 class="prod-discount"></h4>
-          <a href="#" data-prodId="" class="add-to-cart"></a>
+          <h4 class="prod-rating">${response[i].rating.rate}</h4>
+          <a href="#" data-prodId="${response[i].id}" class="add-to-cart"></a>
         </div>
       </div>
     </div>
     `;
   }
   };
-  fetchProducts('https://dummyjson.com/products');
+  fetchProducts('https://fakestoreapi.com/products');
 });
 
 
